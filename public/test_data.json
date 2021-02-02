@@ -1,0 +1,183 @@
+{
+    "templates": [
+        {
+            "name": "Credential template name",
+            "tid": "6019587274814d00122ea49f",
+            "cid": "6019584f74814d00122ea49d",
+            "templateItens": [
+                {
+                    "isMandatory": "true",
+                    "attrFormat": "keyval",
+                    "_id": "6019587274814d00122ea4a1",
+                    "isPublic": "true",
+                    "type": "text",
+                    "attr": "Name"
+                }
+            ],
+            "users": [
+                {
+                    "user_data": {
+                        "Name": "Joana"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Joana"
+                    },
+                    "status": "active",
+                    "wa": "0xf8b177809a5888cc1070dc68cbe65e003538a2cc",
+                    "id": "6019588e74814d00122ea4a3",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Antonio Carlos "
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Antonio Carlos "
+                    },
+                    "status": "waiting_wallet",
+                    "id": "6019695d74814d00122ea4a6",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Carlos Antonio"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Carlos Antonio"
+                    },
+                    "status": "waiting_wallet",
+                    "id": "601971f574814d00122ea4ab",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Carlos Antonio"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Carlos Antonio"
+                    },
+                    "status": "waiting_wallet",
+                    "id": "601971f574814d00122ea4ab",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Carlos Antonio"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Carlos Antonio"
+                    },
+                    "status": "revoked_wallet",
+                    "id": "601971f574814d00122ea4ab",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Maria"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Maria"
+                    },
+                    "status": "waiting_wallet",
+                    "id": "6019721374814d00122ea4ae",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                }
+            ]
+        },
+         {
+            "name": "Credential name",
+            "tid": "6019587274814d00122ea49f0",
+            "cid": "6019584f74814d00122ea49d",
+            "templateItens": [
+                {
+                    "isMandatory": "true",
+                    "attrFormat": "keyval",
+                    "_id": "6019587274814d00122ea4a1",
+                    "isPublic": "true",
+                    "type": "text",
+                    "attr": "Name"
+                }
+            ],
+            "users": [
+                {
+                    "user_data": {
+                        "Name": "Joana"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Joana"
+                    },
+                    "status": "active",
+                    "wa": "0xf8b177809a5888cc1070dc68cbe65e003538a2cc",
+                    "id": "6019588e74814d00122ea4a3",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Carlos Antonio"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Carlos Antonio"
+                    },
+                    "status": "active",
+                    "id": "601971f574814d00122ea4ab",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Carlos Antonio"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Carlos Antonio"
+                    },
+                    "status": "waiting_wallet",
+                    "id": "601971f574814d00122ea4ab",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Carlos Antonio"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Carlos Antonio"
+                    },
+                    "status": "revoked_wallet",
+                    "id": "601971f574814d00122ea4ab",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                },
+                {
+                    "user_data": {
+                        "Name": "Maria"
+                    },
+                    "public_field": {
+                        "attr": "Name",
+                        "value": "Maria"
+                    },
+                    "status": "active",
+                    "id": "6019721374814d00122ea4ae",
+                    "tid": "6019587274814d00122ea49f",
+                    "cid": "6019584f74814d00122ea49d"
+                }
+            ]
+        }
+    ]
+}
