@@ -39,7 +39,6 @@ export default {
       .then(() => (this.isLoading = false))
       .catch((err) => {
         console.error(err.message);
-        // localStorage.removeItem
       });
   },
   data() {

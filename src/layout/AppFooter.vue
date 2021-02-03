@@ -1,8 +1,8 @@
 <template>
   <footer class="footer_wallid">
     <v-container class="">
-      <v-row justify="space-around" class="">
-        <v-btn color="white" :ripple="false" text rounded class="my-2 ml-n4">
+      <v-row justify="space-around" class="mx-n6">
+        <v-btn color="white" :ripple="false" text rounded class="my-2">
           <p>
             {{ $t("links.terms") }}
           </p>
@@ -117,13 +117,8 @@ export default {
   border-top: solid 1px var(--very-light-grey);
   .container {
     max-width: 1170px;
-    .row {
-      margin-left: -16px;
-      margin-right: -16px;
-    }
     .v-btn {
       text-transform: none;
-      margin: 0 !important;
       padding: 10px 16px;
     }
     .locale-changer {

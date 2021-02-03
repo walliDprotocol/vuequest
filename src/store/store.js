@@ -5,8 +5,6 @@ import axios from "axios";
 
 import { GET_TEMPLATE, DASHBOARD } from "./actions";
 
-//USER STATES
-
 Vue.use(Vuex);
 export default new Vuex.Store({
   //initial state
@@ -31,7 +29,7 @@ export default new Vuex.Store({
           }
           return comparison;
         };
-
+        //Retrieve data from local file
         axios("/test_data.json", {
           method: "GET",
           headers: {
@@ -53,13 +51,14 @@ export default new Vuex.Store({
           })
           .catch((err) => {
             console.error(err);
+            reject(err);
           });
       });
     },
     [GET_TEMPLATE]: ({ commit, state }, { tid }) => {
       return new Promise((resolve) => {
         console.log("templstes", state.templates);
-        //find by id then resolve
+        //TO DO: find by id and resolve
       });
     },
   },

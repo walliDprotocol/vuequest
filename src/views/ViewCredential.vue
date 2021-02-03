@@ -33,9 +33,6 @@
             <p>waiting_wallet</p>
             <p>revoked_wallet</p>
           </v-col>
-          <!-- <v-col cols="12" class="pt-2 pb-2 px-0">
-            <v-card style="opacity:0;" :height="50" @click="sync"> </v-card>
-          </v-col> -->
         </v-row>
       </v-col>
     </v-row>
@@ -43,7 +40,6 @@
 </template>
 
 <script>
-
 export default {
   components: {},
   props: {
@@ -63,7 +59,7 @@ export default {
     getTemplate() {
       console.log("tid", this.tid);
 
-     
+      //TO DO: get template from store action GET_TEMPLATE
     },
   },
   data() {
