@@ -15,10 +15,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   debug("toPath", to);
 
-  if (to.path == "/Dashboard/ViewCredential") {
-    return next();
-  }
-  return next("/Dashboard/ViewCredential");
+  return next();
 });
 
 export default router;

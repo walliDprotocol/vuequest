@@ -2,7 +2,7 @@
   <v-app-bar app color="white" class="header" flat>
     <div class="d-flex align-center">
       <router-link
-        to="/"
+        to="/Dashboard"
         active-class=""
         class="header-button px-0 wallid-logo"
         text
@@ -24,7 +24,7 @@
     <v-spacer></v-spacer>
 
     <router-link
-      to="/Dashboard/ViewCredential"
+      to="/Dashboard"
       prop="button"
       class="header-button "
       text

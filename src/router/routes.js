@@ -5,7 +5,7 @@ import Home from "../views/Home";
 export const SIGNIN = "/SignIn";
 export const SIGNUP = "/SignUp";
 
-const routesList = ["ViewCredential"];
+const routesList = ["ViewCredential","Dashboard"];
 
 const children = routesList.map((route) => {
   switch (route) {
@@ -18,7 +18,7 @@ const children = routesList.map((route) => {
             /* webpackChunkName: "[request]" */ "../views/" + route + ".vue"
           ),
         title: route,
-        // fill vue props from query
+        props: (r) => ({ tid: r.query.tid }),
       };
     default:
       return {
@@ -41,6 +41,6 @@ export const routes = [
   },
   {
     path: "/*",
-    redirect: "/ViewCredential",
+    redirect: "/Dashboard",
   },
 ];

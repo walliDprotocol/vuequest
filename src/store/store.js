@@ -10,9 +10,12 @@ export default new Vuex.Store({
   //initial state
   state: {
     templates: [],
+    caName: "Wallid Test CA"
   },
   getters: {
     templates: (state) => state.templates,
+    caName: (state) => state.caName,
+
   },
   actions: {
     [DASHBOARD]: ({ commit, dispatch, state }) => {
