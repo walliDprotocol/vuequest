@@ -12,14 +12,14 @@
           <span style="margin: 2px 6px 2px 2px; position:absolute">
             {{ credential }}</span
           >
-        </p> 
+        </p>
       </v-col> -->
       <v-col cols="12" class="pt-15">
-        <h1 class="title_header">{{ caName }} {{ $t("dashboard.title") }}</h1>
+        <h1 class="title_header">{{ caName }} {{ $t('dashboard.title') }}</h1>
       </v-col>
       <v-col cols="6" class="pt-4">
         <h2 class="subtitle_header">
-          {{ $t("dashboard.subtitle") }}
+          {{ $t('dashboard.subtitle') }}
         </h2>
       </v-col>
       <v-col cols="12" md="9" class="pb-8 pt-0 pr-16">
@@ -34,38 +34,33 @@
           </v-col>
         </v-row>
       </v-col>
-      
     </v-row>
   </v-container>
 </template>
 
 <script>
 // import { mapGetters } from "vuex";
-import CredentialButton from "../components/CredentialButton";
-
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
+import CredentialButton from '../components/CredentialButton';
 
 export default {
-  name: "SignIn",
+  name: 'SignIn',
   components: {
     CredentialButton,
   },
   created() {
-    console.log("Dashboard");
+    console.log('Dashboard');
   },
   watch: {
     templates(value) {
       console.log(value);
-      this.showCreateCAModal = value.length < 1 ? true : false;
+      this.showCreateCAModal = value.length < 1;
     },
   },
   mounted() {},
 
   computed: {
-    ...mapGetters([
-      "caName",
-      "templates",
-    ]),
+    ...mapGetters(['caName', 'templates']),
     cid() {
       // gets updated automatically
       return this.$store.state.cid;
@@ -78,7 +73,9 @@ export default {
       return this.$store.state.templates;
     },
     hasCredentials() {
-      return !this.$isProduction || this.templates.length < this.maxTemplatesCounter; // return true for testing
+      return (
+        !this.$isProduction || this.templates.length < this.maxTemplatesCounter
+      ); // return true for testing
     },
   },
   methods: {
@@ -90,7 +87,7 @@ export default {
       console.log(cred.tid);
       if (cred.tid) {
         this.$router.push({
-          name: "ViewCredential",
+          name: 'ViewCredential',
           query: { tid: cred.tid },
         });
       }

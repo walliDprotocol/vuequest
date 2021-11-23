@@ -1,22 +1,20 @@
 // import People from "../views/People";
 // import Welcome from "./../views/Welcome";
-import Home from "../views/Home";
+import Home from '../views/Home.vue';
 
-export const SIGNIN = "/SignIn";
-export const SIGNUP = "/SignUp";
+export const SIGNIN = '/SignIn';
+export const SIGNUP = '/SignUp';
 
-const routesList = ["ViewCredential","Dashboard"];
+const routesList = ['ViewCredential', 'Dashboard', 'PluginTest'];
 
 const children = routesList.map((route) => {
   switch (route) {
-    case "ViewCredential":
+    case 'ViewCredential':
       return {
-        path: "Dashboard/" + route,
+        path: `Dashboard/${route}`,
         name: route,
         component: () =>
-          import(
-            /* webpackChunkName: "[request]" */ "../views/" + route + ".vue"
-          ),
+          import(/* webpackChunkName: "[request]" */ `../views/${route}.vue`),
         title: route,
         props: (r) => ({ tid: r.query.tid }),
       };
@@ -25,9 +23,7 @@ const children = routesList.map((route) => {
         path: route,
         name: route,
         component: () =>
-          import(
-            /* webpackChunkName: "[request]" */ "../views/" + route + ".vue"
-          ),
+          import(/* webpackChunkName: "[request]" */ `../views/${route}.vue`),
         title: route,
       };
   }
@@ -35,12 +31,12 @@ const children = routesList.map((route) => {
 
 export const routes = [
   {
-    path: "/",
+    path: '/',
     component: Home,
-    children: children,
+    children,
   },
   {
-    path: "/*",
-    redirect: "/Dashboard",
+    path: '/*',
+    redirect: '/Dashboard',
   },
 ];

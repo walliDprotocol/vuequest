@@ -23,23 +23,22 @@
 
     <v-spacer></v-spacer>
 
-    <router-link
-      to="/Dashboard"
-      prop="button"
-      class="header-button "
-      text
-    >
+    <router-link to="/Dashboard" prop="button" class="header-button " text>
       <DashBoardIcon />
-      <span class="mx-2">{{ $t("header.dashboard") }}</span>
+      <span class="mx-2">{{ $t('header.dashboard') }}</span>
+    </router-link>
+    <router-link to="/PluginTest" prop="button" class="header-button " text>
+      <DashBoardIcon />
+      <span class="mx-2">PluginTest</span>
     </router-link>
   </v-app-bar>
 </template>
 
 <script>
-import DashBoardIcon from "../assets/DashBoardIcon";
+import DashBoardIcon from '../assets/DashBoardIcon.vue';
 
 export default {
-  name: "app-header",
+  name: 'app-header',
   components: {
     DashBoardIcon,
   },
@@ -101,7 +100,7 @@ export default {
       position: relative;
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         height: 2px;
         background: #0ea4b5;

@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import CrendentialIcon from "../../assets/icon-credential";
-import IconAddNewTemplate from "../../assets/icon-add-new-template.vue";
+import CrendentialIcon from '../../assets/icon-credential';
+import IconAddNewTemplate from '../../assets/icon-add-new-template.vue';
 
 export default {
-  name: "CredentialButton",
+  name: 'CredentialButton',
   components: {
     IconAddNewTemplate,
     CrendentialIcon,

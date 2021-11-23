@@ -1,29 +1,29 @@
-import Vue from "vue";
-import store from "./store";
-import router from "./router";
-import vuetify from "./plugins/vuetify";
-import VueLogger from "vuejs-logger";
-import i18n from "./plugins/i18n";
-import util from "./plugins/util";
+import Vue from 'vue';
+import VueLogger from 'vuejs-logger';
+import store from './store';
+import router from './router';
+import vuetify from './plugins/vuetify';
+import i18n from './plugins/i18n';
+import util from './plugins/util';
 
-import "./css/style.scss";
-import "./css/modal.scss";
+import './css/style.scss';
+import './css/modal.scss';
 
-import App from "./App.vue";
+import App from './App.vue';
 
 Vue.config.productionTip = false;
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production';
 
-Vue.prototype.$isProduction = process.env.VUE_APP_AMBIENT != "DEMO";
+Vue.prototype.$isProduction = process.env.VUE_APP_AMBIENT !== 'DEMO';
 
-//initialize logger
+// initialize logger
 const options = {
   isEnabled: !isProduction,
-  logLevel: isProduction ? "error" : "debug",
+  logLevel: isProduction ? 'error' : 'debug',
   stringifyArguments: false,
   showLogLevel: true,
   showMethodName: false,
-  separator: "|",
+  separator: '|',
   showConsoleColors: true,
 };
 
@@ -37,4 +37,4 @@ new Vue({
   router,
   vuetify,
   render: (h) => h(App),
-}).$mount("#app");
+}).$mount('#app');

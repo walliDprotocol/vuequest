@@ -1,1 +1,1 @@
-export { default } from "./CredentialButton.vue";
+export { default } from './CredentialButton.vue';

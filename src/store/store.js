@@ -1,21 +1,20 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 /* eslint-disable */
-import axios from "axios";
+import axios from 'axios';
 
-import { GET_TEMPLATE, DASHBOARD } from "./actions";
+import { GET_TEMPLATE, DASHBOARD } from './actions';
 
 Vue.use(Vuex);
 export default new Vuex.Store({
   //initial state
   state: {
     templates: [],
-    caName: "Wallid Test CA"
+    caName: 'Wallid Test CA',
   },
   getters: {
     templates: (state) => state.templates,
     caName: (state) => state.caName,
-
   },
   actions: {
     [DASHBOARD]: ({ commit, dispatch, state }) => {
@@ -33,22 +32,22 @@ export default new Vuex.Store({
           return comparison;
         };
         //Retrieve data from local file
-        axios("/test_data.json", {
-          method: "GET",
+        axios('/test_data.json', {
+          method: 'GET',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
         })
           .then((response) => {
-            console.log("DASHBOARD", response);
+            console.log('DASHBOARD', response);
             let data = response.data;
 
             let orderTemplates = [...data.templates];
             orderTemplates.sort(compare);
 
-            console.log("orderTemplates", orderTemplates);
+            console.log('orderTemplates', orderTemplates);
 
-            commit("setTemplates", orderTemplates);
+            commit('setTemplates', orderTemplates);
 
             resolve({ cid: data.cid, templates: orderTemplates });
           })
@@ -60,8 +59,9 @@ export default new Vuex.Store({
     },
     [GET_TEMPLATE]: ({ commit, state }, { tid }) => {
       return new Promise((resolve) => {
-        console.log("templstes", state.templates);
+        console.log('templstes', state.templates);
         //TO DO: find by id and resolve
+        resolve(state.templates.find((e) => e.tid == tid));
       });
     },
   },

@@ -56,14 +56,14 @@
 </template>
 <script>
 export default {
-  name: "app-footer",
+  name: 'app-footer',
   data() {
     return {
       year: new Date().getFullYear(),
       langs: [
-        { id: "pt", name: "Português" },
-        { id: "en", name: "English" },
-        { id: "es", name: "Español" },
+        { id: 'pt', name: 'Português' },
+        { id: 'en', name: 'English' },
+        { id: 'es', name: 'Español' },
       ],
     };
   },

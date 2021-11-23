@@ -32,7 +32,7 @@ export default {
     },
     color: {
       type: String,
-      default: "#373c43",
+      default: '#373c43',
     },
   },
 };

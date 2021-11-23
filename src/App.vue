@@ -6,9 +6,8 @@
 
 <script>
 
-
 export default {
-  name: "App",
+  name: 'App',
 
   created() {
     this.initLang();
@@ -19,9 +18,9 @@ export default {
   data() {
     return {
       langs: [
-        { id: "pt", name: "Português" },
-        { id: "en", name: "English" },
-        { id: "es", name: "Español" },
+        { id: 'pt', name: 'Português' },
+        { id: 'en', name: 'English' },
+        { id: 'es', name: 'Español' },
       ],
     };
   },

@@ -1,19 +1,20 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import { routes } from "./routes";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import { routes } from './routes';
+
+import util from '../plugins/util';
+
 Vue.use(VueRouter);
 
-import util from "../plugins/util";
-
-const debug = util.methods.debug;
+const { debug } = util.methods;
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   routes,
 });
 
 router.beforeEach((to, from, next) => {
-  debug("toPath", to);
+  debug('toPath', to);
 
   return next();
 });

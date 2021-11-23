@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <app-header />
+    <AppHeader />
     <main>
       <LoadingScreen :loading="isLoading" />
 
       <v-container v-if="!isLoading" class="router-views">
         <v-row>
-          <v-col cols="12" md="12" class="pb-8 pt-0 ">
+          <v-col cols="12" md="12" class="pb-8 pt-0">
             <transition origin="center" mode="out-in" :duration="250">
               <router-view />
             </transition>
@@ -14,37 +14,39 @@
         </v-row>
       </v-container>
     </main>
-    <app-footer />
+    <AppFooter />
   </v-app>
 </template>
 
 <script>
-import AppHeader from "../layout/AppHeader";
-import AppFooter from "../layout/AppFooter";
-import LoadingScreen from "../components/LoadingScreen";
+import AppHeader from '../layout/AppHeader.vue';
+import AppFooter from '../layout/AppFooter.vue';
+import LoadingScreen from '../components/LoadingScreen.vue';
 
-import { DASHBOARD } from "../store/actions";
+import { DASHBOARD } from '../store/actions';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     AppHeader,
     AppFooter,
     LoadingScreen,
   },
-  created() {
-    console.log("Home created");
-    this.$store
-      .dispatch(DASHBOARD)
-      .then(() => (this.isLoading = false))
-      .catch((err) => {
-        console.error(err.message);
-      });
-  },
   data() {
     return {
       isLoading: true,
     };
+  },
+  created() {
+    console.log('Home created');
+    this.$store
+      .dispatch(DASHBOARD)
+      .then(() => {
+        this.isLoading = false;
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
   },
 };
 </script>
